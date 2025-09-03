@@ -1,5 +1,8 @@
-#ifdef PTY_HPP
+#ifndef PTY_HPP
 #define PTY_HPP
+
+#include <cstddef>
+#include <sys/types.h>
 
 class PTY {
     public:
@@ -18,11 +21,11 @@ class PTY {
 
     private:
         // the master file descriptor
-        int masterfd = -1;
+        int masterfd;
         // stores process id of child shell process
-        pid_t child_pid = -1;
+        pid_t child_pid;
         // tracking status of session
-        bool running = true;
+        bool running;
 };
 
 #endif
