@@ -55,7 +55,7 @@ class Terminal {
             NORMAL,
             ESCAPE,
             CSI,
-        }
+        };
         ParserState parser_state_;
 
         std::string escape_sequence_;
